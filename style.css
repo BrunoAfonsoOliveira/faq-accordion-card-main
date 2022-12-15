@@ -57,6 +57,7 @@ body {
     flex-direction: column;
     justify-content: center;
     font-size: var(--font-size);
+    font-weight: var(--fw-400);
     font-family: 'Kumbh Sans', sans-serif;
 }
 
@@ -130,6 +131,7 @@ body {
     font-weight: var(--fw-400);
     color: var(--clr-ntl-txt-700);
     position: relative;
+    transition: all .5s;
 }
 
 .list__item-title:hover {
@@ -145,22 +147,29 @@ span {
     position: absolute;
     right: 1rem;
     top: .5rem;
-    transition: all .5s ease;
+    transition: all .5s;
 }
 
 .list__item-description {
     color: var(--clr-ntl-txt-600);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1.4s ease;
+    transition: all 1s;
+    margin-right: 2rem;
 }
 
 .list__item.active .list__item-description {
     max-height: 300px;
+    margin-top: .5rem;
 }
 
 .list__item.active .list__item-arrow {
     transform: rotate(180deg);
+}
+
+.list__item.active .list__item-title {
+    color: var(--clr-pmr-txt-900);
+    font-weight: var(--fw-700);
 }
 
 @media (min-width: 600px) {
